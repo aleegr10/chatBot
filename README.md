@@ -13,7 +13,7 @@ El chatbot puede analizar y entender el contenido de los archivos proporcionados
 > Usuario: ¿Cuál es el tema principal del documento?
 > Chatbot: El tema principal del documento es...
 
-## Búsqueda en Wikipedia
+### Búsqueda en Wikipedia
 El chatbot tiene una función integrada para buscar información en Wikipedia. Cuando se le pide que busque un tema en Wikipedia, el chatbot consulta la página de Wikipedia correspondiente y proporciona un resumen del artículo.
 
 > Usuario: Busca en Wikipedia: Pau GAsol
