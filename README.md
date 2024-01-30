@@ -2,6 +2,12 @@
 ### Introducción
 Este chatbot tiene la capacidad de responder preguntas basadas en archivos proporcionados, buscar información en Wikipedia y obtener las últimas noticias sobre baloncesto. A continuación, se detalla cómo funciona cada una de estas características.
 
+### Diagrama 
+<p style = 'text-align:center;'>
+<img src="./diagramaMermaid.png" width="400px"/>
+
+</p>
+
 ### Responder preguntas sobre archivos proporcionados
 El chatbot puede analizar y entender el contenido de los archivos proporcionados sobre baloncesto. Cuando se le hace una pregunta relacionada con el archivo, el chatbot busca en el contenido del archivo para encontrar la respuesta más precisa y relevante.
 

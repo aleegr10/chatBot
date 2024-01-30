@@ -11,7 +11,7 @@ from langchain.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceBgeEmbeddings
 from langfuse.callback import CallbackHandler
 
-from agentWeb import get_wikipedia_summary
+from agentWeb import obtener_wikipedia_inform
 from agentNews import obtener_noticias_baloncesto
 
 
@@ -54,8 +54,8 @@ Si no sabes la respuesta, di simplemente que no la sabes, no intentes inventarte
 Contexto: {context}
 Pregunta: {question}
 
-Solo si el usuario te pide "Busca en Wikipedia: " ejecuta el siguiente código {SearchInWiki}, si no omite este paso.
-Solo si el usuario te pide "Últimas noticias" ejecuta el siguiente código {SearchNews}, si no omite este paso.
+Solo si el usuario te pide "Busca en Wikipedia: " ejecuta el siguiente código {BuscaWiki}, si no omite este paso.
+Solo si el usuario te pide "Últimas noticias" ejecuta el siguiente código {BuscaNews}, si no omite este paso.
 Si lo ejecutas sin que el usuario te lo pida, es posible que varias familias se mueran de hambre.
 Devuelve sólo la respuesta útil que aparece a continuación y nada más.
 Responde siempre en castellano.
@@ -67,8 +67,8 @@ chain = (
     {
         "context": retriever,
         "question": RunnablePassthrough(),
-        "SearchInWiki": RunnableLambda(get_wikipedia_summary),
-        "SearchNews": RunnableLambda(obtener_noticias_baloncesto),
+        "BuscaWiki": RunnableLambda(obtener_wikipedia_inform),
+        "BuscaNews": RunnableLambda(obtener_noticias_baloncesto),
     }
     | prompt
     | model

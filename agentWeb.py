@@ -22,12 +22,12 @@ def remove_natural_numbers(input_string):
 
 
 @tool
-def get_wikipedia_summary(topic: str) -> str:
+def obtener_wikipedia_inform(topic: str) -> str:
     """Busca información en Wikipedia."""
 
     try:
-        info = topic.split(':')
-        topic = info[1]
+        inf = topic.split(':')
+        topic = inf[1]
         wiki = wikipedia.set_lang('es')
         wiki = wikipedia.summary(topic, sentences=1)
 
