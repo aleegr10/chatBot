@@ -15,9 +15,9 @@ from agentNews import obtener_noticias_baloncesto
 
 
 # Carga las variables de entorno desde el archivoc .env
-TOGETHER_API_KEY = process.env.TOGETHER_API_KEY
-LANGFUSE_PUBLIC_KEY = process.env.LANGFUSE_PUBLIC_KEY
-LANGFUSE_SECRET_KEY = process.env.LANGFUSE_SECRET_KEY
+TOGETHER_API_KEY = os.environ.get("TOGETHER_API_KEY")
+LANGFUSE_PUBLIC_KEY = os.environ.get("LANGFUSE_PUBLIC_KEY")
+LANGFUSE_SECRET_KEY = os.environ.get("LANGFUSE_SECRET_KEY")
 
 handler = CallbackHandler(
     public_key=LANGFUSE_PUBLIC_KEY,
