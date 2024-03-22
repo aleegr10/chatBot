@@ -22,7 +22,7 @@ chromadb==0.4.20
 click==8.1.7
 colorama==0.4.6
 coloredlogs==15.0.1
-contourpy==1.1.1
+contourpy==1.2.0
 ctransformers==0.2.27
 cycler==0.12.1
 dataclasses-json==0.5.14
