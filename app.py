@@ -6,7 +6,6 @@ from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 
 # from langchain_community.llms import Together
 import os
-from dotenv import load_dotenv
 from langchain.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceBgeEmbeddings
 from langfuse.callback import CallbackHandler
