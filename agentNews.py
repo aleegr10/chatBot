@@ -5,9 +5,7 @@ import os
 
 def obtener_noticias_baloncesto(prompt):
     # Carga las variables de entorno desde el archivo .env
-    load_dotenv()
-    # Accede a la API key utilizando os.environ
-    NEWS_API_KEY = os.environ.get("NEWS_API_KEY")
+    NEWS_API_KEY = process.env.NEWS_API_KEY
 
     url = "https://newsapi.org/v2/everything"
 
