@@ -1,0 +1,2 @@
+[build]
+command = "docker run -v $(pwd):/opt/app your-custom-image-name:tag python3 app.py"
