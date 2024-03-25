@@ -6,6 +6,7 @@ from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 
 # from langchain_community.llms import Together
 import os
+from dotenv import load_dotenv
 from langchain.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceBgeEmbeddings
 from langfuse.callback import CallbackHandler
@@ -15,9 +16,11 @@ from agentNews import obtener_noticias_baloncesto
 
 
 # Carga las variables de entorno desde el archivoc .env
-TOGETHER_API_KEY = os.environ.get("TOGETHER_API_KEY")
-LANGFUSE_PUBLIC_KEY = os.environ.get("LANGFUSE_PUBLIC_KEY")
-LANGFUSE_SECRET_KEY = os.environ.get("LANGFUSE_SECRET_KEY")
+load_dotenv()
+
+TOGETHER_API_KEY = os.environ["TOGETHER_API_KEY"]
+LANGFUSE_PUBLIC_KEY = os.environ["LANGFUSE_PUBLIC_KEY"]
+LANGFUSE_SECRET_KEY = os.environ["LANGFUSE_SECRET_KEY"]
 
 handler = CallbackHandler(
     public_key=LANGFUSE_PUBLIC_KEY,
