@@ -1,3 +1,2 @@
 [build]
   command = "python app.py"
-  publish = "../chatBot"
